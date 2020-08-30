@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-position: outside;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#wrapper {
+  margin: 0 auto;
+}
+#header h1 {
+  font-size: 18px;
+  position: relative;
+  top: 90px;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 0.4em;
+  color: rgba(46, 30, 187, 0.609);
+}
+#header {
+  text-align: center;
+  margin: 0 auto;
+  background-image: url(../images/img3698786124269564432_538e25aed5146a274c0a819fbe123bc5.jpg);
+  background-repeat: no-repeat;
+  width: auto;
+  height: 200px;
+  background-size: cover;
+}
+#nav-content2 {
+  display: none;
+}
+
+#menu {
+  text-align: right;
+}
+#menu img {
+  width: 0.8em;
+}
+
+#navi ul {
+  padding: 0;
+}
+#navi li {
+  padding: 5px;
+}
+#navi ul li a {
+  font-size: 11px;
+}
+
+#navi {
+  padding: 10px;
+
+  width: 25px;
+  margin: 0;
+  position: absolute;
+  right: 0px;
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+  position: absolute;
+  height: 3px; /*線の太さ*/
+  width: 25px; /*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: "";
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none; /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0; /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /*最前面に*/
+  width: 50%; /*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px; /*最大幅（調整してください）*/
+  height: 100%;
+  background: rgba(248, 159, 4, 0.557); /*背景色*/
+  transition: 0.3s ease-in-out; /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%); /*左に隠しておく*/
+}
+#nav-content ul {
+  padding: 5px;
+}
+#nav-content ul li a {
+  color: white;
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block; /*カバーを表示*/
+  opacity: 0.5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%); /*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+#about {
+  padding-bottom: 20px;
+}
+.title {
+  padding: 20px 0 20px 0;
+  line-height: 1.2em;
+  text-align: center;
+}
+.title h2 {
+  font-family: Silom;
+}
+.title span {
+  font-family: ヒラギノ角ゴ ProN;
+  font-size: 10px;
+}
+.txt {
+  padding: 0 60px;
+  font-size: 12px;
+  line-height: 1.9em;
+}
+.year {
+  margin-bottom: 20px;
+}
+#exhibition ul li a,
+#exhibition ul li p {
+  margin: 0 15px;
+}
+#exhibition ul li a {
+  text-decoration: underline;
+}
+#exhibition ul li p {
+  display: inline;
+}
+#garally ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#garally ul li {
+  width: 187px;
+  height: 187px;
+}
+
+#garally ul li img {
+  width: 187px;
+  height: 187px;
+}
+#garally ul li img:hover {
+  opacity: 0.5;
+}
+.garallyCont {
+  padding: 0 0px;
+}
+#footer {
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: orange;
+  text-align: center;
+  font-size: 8px;
+}
+#sns {
+  display: flex;
+
+  justify-content: center;
+}
+#sns i {
+  margin: 10px 10px;
+}
+.cp_iptxt {
+  position: relative;
+  width: 90%;
+  margin: 40px 3%;
+}
+.cp_iptxt input[type="text"] {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  color: #aaaaaa;
+  border: none;
+  border-bottom: 2px solid #1b2538;
+  background: transparent;
+}
+.ef input[type="text"]:focus {
+  border-bottom: 2px solid #da3c41;
+  outline: none;
+}
+.contents {
+  padding: 30px 0;
+}
+#exhibition2 {
+  display: none;
+}
+.pc-img {
+  display: none;
+}
+#sns1 {
+  display: none;
+}
+.my-gray {
+  color: rgba(0, 0, 0, 0.822);
+}
+.my-gray:hover {
+  opacity: 0.5;
+}
+
+/*--------------------------------------------------------*/
+
+.js-animation {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+.js-animation.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+/*--------------------------------------------------------*/
+/* 基本のスタイル */
+.foo.delighter {
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* スタート時のスタイル */
+.foo.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+/* エンド時のスタイル */
+.foo.delighter.started.ended {
+  border: solid red 10px;
+}
+
+/*--------------------------------------------------------*/
+
+@media screen and (max-width: 375px) {
+  #about {
+    background-image: url(../images/asset1.png), url(../images/asset2.png),
+      url(../images/UaQCfN.tif.png), url(../images/HGPeOi.tif.png);
+    background-repeat: no-repeat;
+    background-position: top -60px left -70px, bottom 0px right -20px,
+      top 20px right 20px, bottom 0 left -25px;
+    background-size: 60%, 60%, 20%, 30%;
+    padding-bottom: 20%;
+  }
+  #garally {
+    background-image: url(../images/asset11.png);
+    background-repeat: no-repeat;
+    background-position: top 10px right -50px;
+    background-size: 60%;
+  }
+  #exhibition {
+    background-image: url(../images/asset3.png), url(../images/EhFtGn.tif.png);
+    background-repeat: no-repeat;
+    background-position: top 100px left -50px, top 180px right -30px;
+    background-size: 60%, 25%;
+  }
+  #profile {
+    padding-bottom: 45%;
+
+    background-image: url(../images/xPipSc.tif.png), url(../images/asset10.png),
+      url(../images/TJSi68.tif.png), url(../images/asset4.png);
+    background-repeat: no-repeat, no-repeat, no-repeat no-repeat;
+    background-size: 48%, 40%, 100%, 110%;
+    background-position: right -60px top 3px, left -70px top 120px,
+      bottom 0 left 0, bottom 60px left -20px;
+  }
+  #contact {
+    background-image: url(../images/asset6.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: bottom 100px right -110px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #about,
+  #garally,
+  #exhibition,
+  #profile,
+  #contact {
+    background-image: none;
+  }
+  #wrapperInner {
+    font-size: 1.4em;
+    background-image: url(../images/asset1.png), url(../images/asset2.png),
+      url(../images/UaQCfN.tif.png), url(../images/HGPeOi.tif.png),
+      url(../images/asset3.png), url(../images/asset23.png),
+      url(../images/TJSi68.tif.png), url(../images/asset4.png),
+      url(../images/asset6.png), url(../images/EhFtGn.tif.png),
+      url(../images/xPipSc.tif.png);
+    background-repeat: no-repeat;
+    background-position: top -200px left -200px, top 500px right -100px,
+      top 20px right 20px, top 360px left -25px, top 1150px left -200px,
+      top 2250px left -150px, top 2650px right -80px, top 2750px right 0px,
+      bottom 90px left -300px, top 1020px right 100px, bottom 1450px right -50px;
+    background-size: 50%, 50%, 20%, 30%, 50%, 30%, 60%, 60%, 60%, 20%, 20%;
+
+    padding-bottom: 20%;
+  }
+  .contents {
+    padding: 50px 50px 100px 50px;
+  }
+  #header {
+    height: 800px;
+  }
+  #header h1 {
+    font-size: 70px;
+    position: absolute;
+    top: 680px;
+    left: 50px;
+  }
+  #sns1 {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #sns1 ul li {
+    margin-bottom: 10px;
+  }
+  #navi {
+    display: none;
+  }
+  #nav-content2 {
+    display: inline;
+  }
+
+  #nav-content2 ul {
+    display: flex;
+    padding: 15px 20px 0 20px;
+  }
+  #nav-content2 ul li {
+    margin: 0 10px;
+    padding: 20px 10px;
+    font-family: Silom;
+  }
+  #nav-content2 ul li a:hover {
+    color: green;
+  }
+  #about {
+    text-align: center;
+  }
+  #about #txt p div {
+    margin: 100px 0;
+  }
+  .title {
+    padding: 30px 0;
+  }
+  .title h2 {
+    font-size: 2em;
+    padding: 15px 0;
+  }
+  .title span {
+    font-size: 1em;
+  }
+  .txt {
+    font-size: 0.7em;
+    font-family: 游ゴシック体;
+    font-weight: 500;
+  }
+  .br-pc {
+    display: block;
+  }
+  .mg {
+    margin: 30px;
+  }
+  #exhibition {
+    display: none;
+  }
+  #exhibition2 {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+  }
+  #exhibition2 p {
+    display: inline;
+  }
+  #exhibition2 a:hover {
+    color: green;
+  }
+  .year {
+    padding: 5px 0;
+  }
+  .year h3 {
+    margin: 10px 0;
+  }
+  .year li {
+    line-height: 2.5em;
+  }
+  .year li a {
+    text-decoration: underline;
+  }
+  .year li a,
+  .year li p {
+    margin: 0 10px;
+  }
+  .pc-img {
+    display: block;
+  }
+  .garally ul li img {
+    width: 20%;
+  }
+  #profile {
+    text-align: center;
+    padding-bottom: 20%;
+  }
+
+  #contact {
+    text-align: center;
+  }
+  #footer {
+    padding: 6% 0;
+  }
+  #wrapperInner {
+    padding-bottom: 0;
+  }
+}
+
+/* #about {
+  background-image: url(../images/asset1.png), url(../images/asset2.png),
+    url(../images/UaQCfN.tif.png), url(../images/HGPeOi.tif.png);
+  background-repeat: no-repeat;
+  background-position: top -60px left -70px, bottom 0px right -20px,
+    top 20px right 20px, bottom 0 left -25px;
+  background-size: 60%, 60%, 20%, 30%;
+  padding-bottom: 20%;
+}
+#garally {
+  background-image: url(../images/asset11.png);
+  background-repeat: no-repeat;
+  background-position: top 10px right -50px;
+  background-size: 60%;
+}
+#exhibition {
+  background-image: url(../images/asset3.png), url(../images/EhFtGn.tif.png);
+  background-repeat: no-repeat;
+  background-position: top 100px left -50px, top 180px right -30px;
+  background-size: 60%, 25%;
+}
+#profile {
+  padding-bottom: 45%;
+
+  background-image: url(../images/xPipSc.tif.png), url(../images/asset10.png),
+    url(../images/TJSi68.tif.png), url(../images/asset4.png);
+  background-repeat: no-repeat, no-repeat, no-repeat no-repeat;
+  background-size: 48%, 40%, 100%, 110%;
+  background-position: right -60px top 3px, left -70px top 120px,
+    bottom 0 left 0, bottom 60px left -20px;
+}
+#contact {
+  background-image: url(../images/asset6.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: bottom 100px right -110px;
+} */
